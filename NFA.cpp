@@ -34,7 +34,7 @@ void Print_Transition(int x, char s[]) {
 int isAccepted(char s[]) {
 	int i = 0, len = strlen(s);
 	while(!flag and i != len) {
-		if(s[i] == s[i+1] and s[i+1] == s[i+2] and s[i+2] == '1' and s[i] == '1') StateAllocation(i, s, len);
+		if(s[i] == '1' and s[i+1] == '1' and s[i+2] == '1') StateAllocation(i, s, len);
 		else state[i] = 'a';
 		i++;
 	}
